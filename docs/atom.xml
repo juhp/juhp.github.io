@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Slick Site</title>
+    <link href="https://juhp.github.io/atom.xml" rel="self" type="application/rss+xml" />
+  <updated>2020-08-26T16:37:SZ</updated>
+  <author>
+      <name>Jens Petersen</name>
+  </author>
+  <id>https://juhp.github.io/</id>
+
+  <entry>
+      <title>Sample Post</title>
+      <link href="https://juhp.github.ioposts/sample-post.html"/>
+      <id>https://juhp.github.ioposts/sample-post.html</id>
+      <updated>2019-01-01T00:00:SZ</updated>
+      <category term="slick"/>
+      <category term="site"/>
+      <summary>My first blog post using slick</summary>
+      <content type="html"><![CDATA[<p>Welcome to your first blog post!</p>]]></content>
+  </entry>
+</feed>

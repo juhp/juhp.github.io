@@ -1,0 +1,9 @@
+#!/bin/sh
+
+UPSTREAM=$HOME/haskell/slick-template
+
+diff -u {.,$UPSTREAM}/slick-template.cabal
+diff -u {.,$UPSTREAM}/stack.yaml
+diff -u {.,$UPSTREAM}/app/Main.hs
+
+diff -ur {.,$UPSTREAM}/site
