@@ -2,20 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>My Slick Site</title>
     <link href="https://juhp.github.io/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2020-08-26T16:37:SZ</updated>
+  <updated>2020-08-29T04:09:SZ</updated>
   <author>
       <name>Jens Petersen</name>
   </author>
   <id>https://juhp.github.io/</id>
 
   <entry>
-      <title>Sample Post</title>
-      <link href="https://juhp.github.ioposts/sample-post.html"/>
-      <id>https://juhp.github.ioposts/sample-post.html</id>
-      <updated>2019-01-01T00:00:SZ</updated>
-      <category term="slick"/>
-      <category term="site"/>
-      <summary>My first blog post using slick</summary>
-      <content type="html"><![CDATA[<p>Welcome to your first blog post!</p>]]></content>
+      <title>Basic benchmarking</title>
+      <link href="https://juhp.github.ioposts/basic-benchmark.html"/>
+      <id>https://juhp.github.ioposts/basic-benchmark.html</id>
+      <updated>2020-08-29T00:00:SZ</updated>
+      <category term="haskell"/>
+      <summary>Using criterion for simple Haskell benchmarking</summary>
+      <content type="html"><![CDATA[<p>My first blog post using slick and in a long while...</p>
+<p><a href="https://hackage.haskell.org/package/bench">Bench</a> is a cool tool using the <a href="https://hackage.haskell.org/package/criterion">criterion</a> for benchmarking commands in the shell.</p>
+<p>A while back hlint got me <a href="https://github.com/juhp/hs-reverse-sort">interested</a> in different ways to do reverse (descending) sort in Haskell, from a <a href="https://ro-che.info/articles/2016-04-02-descending-sort-haskell">2016 article</a> by Roman Cheplyaka.</p>
+<p>As I am starting to work on adding <a href="https://hackage.haskell.org/package/typed-process">typed-process</a> to the next major version of <a href="https://hackage.haskell.org/package/simple-cmd">simple-cmd</a> and I had noticed a slowdown while experimenting with <code>typed-process</code> in <a href="https://hackage.haskell.org/package/rpmbuild-order">rpmbuild-order</a>, I thought I would try to <a href="https://github.com/juhp/hs-processes-bench">measure</a> the overhead of using <code>typed-process</code> compared to just <code>process</code> for simple command output.</p>
+<p>So this is not really a very fair comparison since <code>typed-process</code> uses heavier machinery like <code>stm</code> and <code>async</code> to correctly buffering and piping of input and output, but for short lived commands there is measureable overhead. I need to experiment more (maybe I should try ghc profiling too) but I may end up using a hybrid approach of <code>process</code> for simple commands and <code>typed-process</code> for more sophisticated I/O stream handling: for example to fix bugs in the current piping commands in simple-cmd and also add a <code>tee</code> function, etc. I wonder if there could be any lower hanging fruit that could improve the performance <code>typed-process</code>? but so far that looks hard to see.</p>]]></content>
   </entry>
 </feed>
