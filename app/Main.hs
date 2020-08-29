@@ -27,7 +27,7 @@ siteMeta :: SiteMeta
 siteMeta =
     SiteMeta { siteAuthor = "Jens Petersen"
              , baseUrl = "https://juhp.github.io"
-             , siteTitle = "My Slick Site"
+             , siteTitle = "A weblog by Jens Petersen"
              , twitterHandle = Just "juhp"
              , githubUser = Just "juhp"
              }
