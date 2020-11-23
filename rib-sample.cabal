@@ -1,0 +1,29 @@
+cabal-version: 2.4
+name: rib-sample
+version: 0.1.0.0
+homepage: https://juhp.github.io/
+bug-reports: https://github.com/juhp/juhp.github.io/issues
+author: Jens Petersen
+maintainer: juhpetersen@gmail.com
+license: BSD-3-Clause
+category: Web
+
+executable rib-sample
+    main-is: Main.hs
+    hs-source-dirs: src
+    default-language: Haskell2010
+    ghc-options:
+        -Wall
+        -Wincomplete-record-updates
+        -Wincomplete-uni-patterns
+    build-depends:
+        base,
+        aeson,
+        clay,
+        lucid,
+        filepath,
+        rib ^>=1.0,
+        rib-core ^>=1.0,
+        shake,
+        text,
+        with-utf8
