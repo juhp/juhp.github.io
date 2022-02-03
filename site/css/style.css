@@ -559,7 +559,7 @@ a.tag, a.category {
   top: 0.75em;
   right: 0.7em;
   display: flex;
-  background: #888;
+  padding: 1em;
 }
 
 .right-sidebar > * {
