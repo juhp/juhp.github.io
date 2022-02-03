@@ -552,6 +552,7 @@ a.tag, a.category {
 .ext-link img {
   width: 32px;
   height: 32px;
+  background: #222;
 }
 
 .right-sidebar {
