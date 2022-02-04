@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="description" content="A weblog by Jens Petersen">
+    <meta name="author" content="Jens Petersen">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@juhp">
+<meta name="twitter:creator" content="@juhp">
+<meta name="twitter:title" content="(WIP draft) Haskell numeric classes">
+    <meta name="twitter:description" content="Summary about the Haskell Numeric type classes">
+        <title>(WIP draft) Haskell numeric classes</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <a id="beacon" href="/">
+            <div id="home-text"> juhp </div>
+          </a>
+        </nav>
+    
+        <div class="right-sidebar">
+          <a class="ext-link" href="https://github.com/juhp">
+        <img src="/images/github-logo.png" alt="Github Profile"/>
+      </a>
+
+          <a class="ext-link" href="https://twitter.com/juhp">
+        <img src="/images/twitter-logo.png" alt="Twitter Profile"/>
+      </a>
+    </div>
+    </header>
+
+<div id="page">
+    <div class="wrapper">
+        <div class="masthead">
+            <span class="title">
+                (WIP draft) Haskell numeric classes
+            </span>
+            <br>
+
+            <br>
+            <span class="byline">by Jens Petersen</span>
+            <br>
+            <span class="date">Feb 4, 2022</span>
+            <br>
+            <div class="metadata">
+            </div>
+            <div class="tags">
+              <span class="tag haskell">haskell</span>
+            </div>
+        </div>
+    </div>
+    <article class="post">
+        <p>I have often found Haskell's various Num type-classes a little confusing. So I thought I would write a short summary to help myself and hopefully others to make it clearer.</p>
+<h2 id="table-of-numeric-classes-from-the-prelude">Table of Numeric classes from the Prelude</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Super =&gt;</th>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">property</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><code>Num a</code></td>
+<td style="text-align: left;"><code>fromInteger :: Integer -&gt; a</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Num, Ord =&gt;</code></td>
+<td style="text-align: left;"><code>Real a</code></td>
+<td style="text-align: left;"><code>toRational :: a -&gt; Rational</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Real, Enum =&gt;</code></td>
+<td style="text-align: left;"><code>Integral a</code></td>
+<td style="text-align: left;"><code>toInteger :: a -&gt; Integer</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Num =&gt;</code></td>
+<td style="text-align: left;"><code>Fractional a</code></td>
+<td style="text-align: left;"><code>fromRational :: Rational -&gt; a</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Fractional =&gt;</code></td>
+<td style="text-align: left;"><code>Floating a</code></td>
+<td style="text-align: left;"><code>exp</code>, <code>log</code>, <code>sin</code>, <code>cosh</code>, ...</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Fractional =&gt;</code></td>
+<td style="text-align: left;"><code>RealFrac a</code></td>
+<td style="text-align: left;"><code>properFraction :: Integral b =&gt; a -&gt; (b, a)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Floating,RealFrac =&gt;</code></td>
+<td style="text-align: left;"><code>RealFloat a</code></td>
+<td style="text-align: left;"><code>decodeFloat :: a -&gt; (Integer, Int)</code></td>
+</tr>
+</tbody>
+</table>
+<p>(<code>type Rational = Ratio Integer</code>)</p>
+<h2 id="other-numeric-types">Other Numeric types</h2>
+<p><code>Complex</code></p>
+<p><code>Ratio a</code></p>
+<p><code>Fixed a</code></p>
+
+        <br>
+        <br>
+
+        <!--Share buttons-->
+        <div class="social-buttons">
+            <a href="https://twitter.com/share" class="twitter-share-button"
+                                                data-url="https://juhp.github.io" data-text="Check out: (WIP draft) Haskell numeric classes - " data-via="juhp">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/juhp" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @juhp</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <div class="fb-like" data-href="" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+</article>
+
+</div>
+
+<footer>
+    <a href="https://github.com/juhp/juhp.github.io">Built</a> with Haskell using <a href="https://github.com/ChrisPenner/slick">slick</a> ❤️
+</footer>
+
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</body>
+</html>

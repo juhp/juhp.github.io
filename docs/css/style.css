@@ -519,3 +519,15 @@ a.tag, a.category {
 .right-sidebar > * {
   margin-left: 12px;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid gray;
+}
+
+td {
+    border: 1px solid gray;
+}

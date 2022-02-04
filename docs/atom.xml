@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>A weblog by Jens Petersen</title>
     <link href="https://juhp.github.io/atom.xml" rel="self" type="application/rss+xml" />
-  <updated>2022-02-04T13:35:SZ</updated>
+  <updated>2022-02-04T18:09:SZ</updated>
   <author>
       <name>Jens Petersen</name>
   </author>
@@ -21,5 +21,66 @@
 <p>As I am starting to work on adding <a href="https://hackage.haskell.org/package/typed-process">typed-process</a> to the next major version of <a href="https://hackage.haskell.org/package/simple-cmd">simple-cmd</a> and I had noticed a slowdown while experimenting with <code>typed-process</code> in <a href="https://hackage.haskell.org/package/rpmbuild-order">rpmbuild-order</a>, I thought I would try to <a href="https://github.com/juhp/hs-processes-bench">measure</a> the overhead of using <code>typed-process</code> compared to just <code>process</code> for simple command output.</p>
 <p>So this is not really a very fair comparison since <code>typed-process</code> uses heavier machinery like <code>stm</code> and <code>async</code> to correctly buffer and pipe input and output, but for short lived commands there is measureable overhead. I need to experiment more (maybe I should try ghc profiling too) but I may end up using a hybrid approach of <code>process</code> for simple commands and <code>typed-process</code> for more sophisticated I/O stream handling: for example to fix bugs in the current piping commands in simple-cmd and also add a <code>tee</code> function, etc. I wonder if there could be any lower hanging fruit that could improve the performance of <code>typed-process</code>? but so far that looks hard to see.</p>
 <p>ps <em>(added 2022)</em> For an example of using tasty-bench, see my tiny <a href="https://github.com/juhp/hs-string-bench">hs-string-bench</a> project.</p>]]></content>
+  </entry>
+  <entry>
+      <title>(WIP draft) Haskell numeric classes</title>
+      <link href="https://juhp.github.ioposts/haskell-numeric.html"/>
+      <id>https://juhp.github.ioposts/haskell-numeric.html</id>
+      <updated>2022-02-04T00:00:SZ</updated>
+      <category term="haskell"/>
+      <summary>Summary about the Haskell Numeric type classes</summary>
+      <content type="html"><![CDATA[<p>I have often found Haskell's various Num type-classes a little confusing. So I thought I would write a short summary to help myself and hopefully others to make it clearer.</p>
+<h2 id="table-of-numeric-classes-from-the-prelude">Table of Numeric classes from the Prelude</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Super =&gt;</th>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">property</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><code>Num a</code></td>
+<td style="text-align: left;"><code>fromInteger :: Integer -&gt; a</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Num, Ord =&gt;</code></td>
+<td style="text-align: left;"><code>Real a</code></td>
+<td style="text-align: left;"><code>toRational :: a -&gt; Rational</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Real, Enum =&gt;</code></td>
+<td style="text-align: left;"><code>Integral a</code></td>
+<td style="text-align: left;"><code>toInteger :: a -&gt; Integer</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Num =&gt;</code></td>
+<td style="text-align: left;"><code>Fractional a</code></td>
+<td style="text-align: left;"><code>fromRational :: Rational -&gt; a</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Fractional =&gt;</code></td>
+<td style="text-align: left;"><code>Floating a</code></td>
+<td style="text-align: left;"><code>exp</code>, <code>log</code>, <code>sin</code>, <code>cosh</code>, ...</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>Fractional =&gt;</code></td>
+<td style="text-align: left;"><code>RealFrac a</code></td>
+<td style="text-align: left;"><code>properFraction :: Integral b =&gt; a -&gt; (b, a)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>Floating,RealFrac =&gt;</code></td>
+<td style="text-align: left;"><code>RealFloat a</code></td>
+<td style="text-align: left;"><code>decodeFloat :: a -&gt; (Integer, Int)</code></td>
+</tr>
+</tbody>
+</table>
+<p>(<code>type Rational = Ratio Integer</code>)</p>
+<h2 id="other-numeric-types">Other Numeric types</h2>
+<p><code>Complex</code></p>
+<p><code>Ratio a</code></p>
+<p><code>Fixed a</code></p>]]></content>
   </entry>
 </feed>
