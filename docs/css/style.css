@@ -97,12 +97,12 @@ img {
   margin: auto; }
 
 a, a:visited, a:hover {
-  color: #EB005B;
+  color: #EB6;
   text-decoration: none;
   -webkit-transition: color 0.1s;
           transition: color 0.1s; }
   a:hover, a:visited:hover, a:hover:hover {
-    color: #EB0978;
+    color: #EC7;
     text-decoration: underline; }
 
 header {
