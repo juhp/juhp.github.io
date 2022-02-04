@@ -428,7 +428,7 @@ a.tag, a.category {
   margin: 0.1em;
   position: absolute;
   border-radius: 0.1em;
-  opacity: 0.4;
+  opacity: 0.6;
   -webkit-transition: opacity 0.5s;
           transition: opacity 0.5s;
   color: inherit; }
