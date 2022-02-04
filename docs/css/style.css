@@ -250,9 +250,7 @@ a.tag, a.category {
   .post p + p {
     margin-top: 1em; }
   .post > p:first-of-type:first-letter {
-    font-size: 6em;
-    line-height: 0.1em;
-    padding-right: 0.06em; }
+    font-size: 3em; }
   .post ul {
     list-style-type: disc;
     text-indent: -1em; }
