@@ -1,0 +1,2 @@
+update:
+	warp -d docs
