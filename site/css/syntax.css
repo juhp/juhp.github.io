@@ -4,6 +4,7 @@ pre {
 
 code {
     color: #6DF;
+    white-space: nowrap;
 }
 
 /* KeyWordTok */
