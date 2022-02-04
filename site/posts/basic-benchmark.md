@@ -44,5 +44,5 @@ etc. I wonder if there could be any lower hanging fruit that could
 improve the performance of `typed-process`? but so far that looks hard
 to see.
 
-ps _(added in 2022)_ For an example of using tasty-bench, see my tiny
+ps _(added 2022)_ For an example of using tasty-bench, see my tiny
 [hs-string-bench](https://github.com/juhp/hs-string-bench) project.
