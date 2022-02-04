@@ -299,18 +299,14 @@ a.tag, a.category {
       .table-of-contents li a .date {
         float: right;
         margin-top: -0.25em;
-        color: rgba(128, 128, 128, 0.8); }
-      .table-of-contents li a:hover {
-        background: #333;
-        color: #FFFFFC;
-        text-decoration: none;
-        padding-left: 1em; }
+        color: #CCC; }
   .table-of-contents ul a {
       color: #DDD; }
   .table-of-contents ul a:hover {
-      background: #DDD;
-      color: #333;
-      padding-left: 1em; }
+      background: #444;
+      color: #FFF;
+      text-decoration: none;
+      padding-left: 0.6em; }
 
 .arrow {
   display: -webkit-box;
