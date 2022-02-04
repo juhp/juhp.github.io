@@ -21,7 +21,7 @@ import           Slick
 import qualified Data.HashMap.Lazy as HML
 import qualified Data.Text                  as T
 
----Config-----------------------------------------------------------------------
+---Config----------------------------------------------------------------------
 
 siteMeta :: SiteMeta
 siteMeta =
@@ -35,7 +35,7 @@ siteMeta =
 outputFolder :: FilePath
 outputFolder = "docs/"
 
---Data models-------------------------------------------------------------------
+--Data models------------------------------------------------------------------
 
 withSiteMeta :: Value -> Value
 withSiteMeta (Object obj) = Object $ HML.union obj siteMetaObj
