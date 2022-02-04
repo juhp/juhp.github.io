@@ -90,7 +90,7 @@ li {
 
 
 em {
-  font-weight: bold;
+  font-weight: 300;
   font-style: italic; }
 
 img {
@@ -246,6 +246,8 @@ a.tag, a.category {
        -moz-hyphens: manual;
         -ms-hyphens: manual;
             hyphens: manual; }
+  .post a {
+      white-space: nowrap; }
   .post p + p {
     margin-top: 1em; }
   .post > p:first-of-type:first-letter {
@@ -260,8 +262,7 @@ a.tag, a.category {
       -webkit-hyphens: manual;
          -moz-hyphens: manual;
           -ms-hyphens: manual;
-              hyphens: manual;
-      word-break: break-word; }
+              hyphens: manual; }
 
 .post img {
   max-width: 100%;
