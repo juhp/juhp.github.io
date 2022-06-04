@@ -18,7 +18,6 @@ html {
 /* Variables */
 html {
   font-family: georgia, serif;
-  color: #333;
   background: #333;
   background: -webkit-linear-gradient(top, #2a2a2a 0%, #333 10%, #333 90%, #2a2a2a 100%);
   background: linear-gradient(to bottom, #2a2a2a 0%, #333 10%, #333 90%, #2a2a2a 100%);

@@ -4,7 +4,7 @@
 {-# LANGUAGE OverloadedStrings     #-}
 {-# LANGUAGE DuplicateRecordFields #-}
 
-module Main where
+module Main (main) where
 
 import           Control.Lens
 import           Control.Monad
